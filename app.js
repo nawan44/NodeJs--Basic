@@ -5,9 +5,24 @@
 const { program } = require("@caporal/core")
 
 
-program.action(({ logger }) => {
-  console.log('this from console.log')
-	logger.info("Hello, world!")
+program
+.argument('<message>', 'Description')
+.argument('<name>' , 'Description', {default: 'stranger'})
+.argument('vocal...', 'Description')
+.argument('numbers...', 'Description')
+
+.action(({args, logger}) => {
+
+logger.info(args.message)
+logger.info(args.name)
+logger.info(args.vocal)
+
+let total = 0
+for (let number of args.numbers)
+	{
+		total = total + number
+	}
+	logger.info(total)
 
 })
 

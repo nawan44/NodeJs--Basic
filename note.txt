@@ -1,0 +1,2 @@
+save vim = esc + :wq
+enter = esc + shift r + enter
