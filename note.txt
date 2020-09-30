@@ -1,2 +1,5 @@
 save vim = esc + :wq
 enter = esc + shift r + enter
+paste = :set paste
+multi delete : arrow up + ctrl v
+
