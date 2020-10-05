@@ -16,9 +16,9 @@
 
 
 const event = require("./test")
-const aa = require("aa")
+const fs = require("fs")
 
-aa.readdir("./", (err, data) => {
+fs.readdir("./", (err, data) => {
     if (err) throw Error(err)
     event.emit("data", data)
 })
